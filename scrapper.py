@@ -86,11 +86,11 @@ def getAllTrains(date):
     for departureStation in stations:
         for arrivalStation in stations:
             if departureStation == arrivalStation: 
-                continue
+                continue    #do nothing if departure and arrival station are the same
             trains = scrapeTrains(departureStation["id"],arrivalStation["id"], date)
-            print(f"{len(trains)} trains found for {departureStation["name"]} -> {arrivalStation["name"]}")
+            print(f"{len(trains)} trains found for {departureStation['name']} -> {arrivalStation['name']}")
             if(trains == []):
-                continue
+                continue    #do nothing if there are no trains for given stations
             allTrains.append(trains)
     
     return json.dumps(allTrains, ensure_ascii=False, indent=2)
