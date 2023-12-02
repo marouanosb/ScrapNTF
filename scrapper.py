@@ -66,7 +66,7 @@ def getAllStations():
     stations = scrapeStations(sntfUrl)
 
     #"ensure_ascii=False" to disable converting special characters (é/à...etc) to ascii code
-    return json.dumps(stations, ensure_ascii=False, indent=2)
+    return json.dumps(stations, ensure_ascii=False, indent=4)
 
 
     #returns list of trains of the given stations as JSON
@@ -74,7 +74,7 @@ def getTrains(departureStation, arrivalStation, date = datetime.date.today()):
     trains = scrapeTrains(departureStation,arrivalStation, date)
 
     #"ensure_ascii=False" to disable converting special characters (é/à...etc) to ascii code
-    return json.dumps(trains, ensure_ascii=False, indent=2)
+    return json.dumps(trains, ensure_ascii=False, indent=4)
 
 
 #passes through all the station and return all train schedules 
@@ -92,12 +92,4 @@ def getAllTrains(date):
                 continue    #do nothing if there are no trains for given stations
             allTrains.append(trains)
     
-    return json.dumps(allTrains, ensure_ascii=False, indent=2)
-
-
-if __name__ == "__main__" :
-    print(datetime.date.today())
-    print(f"{len(json.loads(getAllStations()))} total stations found.")
-    #print(f"{len(json.loads(getAllTrains(datetime.date.today())))} total trains found.")
-
-    
+    return json.dumps(allTrains, ensure_ascii=False, indent=4)
