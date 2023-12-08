@@ -43,7 +43,7 @@ USER appuser
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 4444
+EXPOSE 5000
 
 # Run the application.
 CMD python api.py
