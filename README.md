@@ -10,9 +10,9 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
     pip --version
     ```
 If you don't have it you can install it using the command :
-    ```
-    python get-pip.py
-    ```
+```
+python get-pip.py
+ ```
 *  Install all the required modules using the command :
     ```
     pip install -r requirements.txt
