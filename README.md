@@ -54,4 +54,5 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
   127.0.0.1:5000/getAllTrains/
   ```
   This will go through all the available stations one by one, and extract all the available train schedules for each station.
+  
   **BE AWARE THAT THIS REQUEST MAY TAKE A LOT OF TIME (COULD TAKE HOURS DEPENDING ON HARDWARE/NETWORK) AND SHOULD BE USED ONCE A DAY AT MAX SINCE THE SCHEDULES GET UPDATED DAILY**
