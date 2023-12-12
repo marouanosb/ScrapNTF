@@ -13,7 +13,7 @@ If you don't have it you can install it using the command :
     ```
     python get-pip.py
     ```
-  *  Install all the required modules using the command :
+*  Install all the required modules using the command :
     ```
     pip install -r requirements.txt
     ```
