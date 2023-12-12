@@ -25,7 +25,7 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
   ```
   python api.py
   ```
-  You can also run it through the Dockerfile that is available inside the project.
+  You can also run it through the Dockerfile/Docker Compose that is available inside the project.
   
 * To get all the stations available, you can send a GET Request to the following endpoint :
   ```
