@@ -21,7 +21,7 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
     ```
 
 ## How to use
-* Run the server using the command :
+* Run the Flask server using the command :
   ```
   python api.py
   ```
@@ -33,12 +33,12 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
   ```
   <img width="911" alt="333" src="https://github.com/marouanosb/ScrapNTF/assets/40308566/1c83c8d3-1e09-492a-9849-ec4b14473742">
   
-  The reponse if in a JSON String format and is as follows :
+  The reponse is in a JSON String format and is as follows :
   ```
-  station{
+  [station{
     "id" : id,
     "name" : name
-  }
+  }, ...]
   ```
   
 * To get specific schedules between two different stations, you can send a GET Request to the following endpoint :
