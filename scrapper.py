@@ -33,6 +33,8 @@ def scrapeTrains(departureStationValue,arrivalStationValue,date):
     trainsUrl = sntfUrl + f"index.php/component/sntf/?gd={departureStationValue}&ga={arrivalStationValue}&dd={strDate}&h1=0000&h2=2359&view=train"
     trains_page = requests.get(trainsUrl).content
 
+    print(departureStationValue, arrivalStationValue, strDate, len(trains_page))
+
     soup = bs(trains_page, "lxml")
     trainsDetailsDivs = soup.find_all("div", class_="col-xs-7 mob_train_body")
 
@@ -66,7 +68,7 @@ def getAllStations():
     stations = scrapeStations(sntfUrl)
 
     #"ensure_ascii=False" to disable converting special characters (é/à...etc) to ascii code
-    return json.dumps(stations, ensure_ascii=False, indent=4)
+    return json.dumps(stations, ensure_ascii=False,indent=4)
 
 
     #returns list of trains of the given stations as JSON

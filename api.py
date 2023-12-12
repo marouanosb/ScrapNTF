@@ -1,12 +1,12 @@
 import datetime
 import json
 from flask import Flask, request, jsonify
-from scrapper import getAllStations, getTrains
+from scrapper import getAllStations, getTrains, getAllTrains
 import json
 
 app = Flask(__name__)
 #make JSON response pretty
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+#app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
 @app.route("/", methods = ['GET'])
 def index():
@@ -16,18 +16,24 @@ def index():
     return totalStationsText
 
 @app.route("/getAllStations/", methods = ['GET'])
-def showAllStation():
+def ReturnAllStation():
     allStations = getAllStations()
-
+    
     return allStations
 
 @app.route("/getTrains/", methods = ['GET'])
-def showTrains():
+def ReturnTrains():
     departureStation = request.args.get("departureStation")
     arrivalStation = request.args.get("arrivalStation")
     trains = getTrains(departureStation, arrivalStation, datetime.date.today())
 
     return trains
+
+@app.route("/getAllTrains/", methods = ['GET'])
+def ReturnAllTrains():
+    allTrains = getAllTrains(datetime.date.today())
+
+    return allTrains
 
 
 if __name__ == '__main__':
