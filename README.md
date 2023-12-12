@@ -24,11 +24,24 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
   python api.py
   ```
   You can also run it through the Dockerfile that is available inside the project.
-* To get all the stations available, you can send a GET Request to the endpoint :
+* To get all the stations available, you can send a GET Request to the following endpoint :
   ```
   127.0.0.1:5000/getAllStations/
   ```
   <img width="911" alt="333" src="https://github.com/marouanosb/ScrapNTF/assets/40308566/1c83c8d3-1e09-492a-9849-ec4b14473742">
+  The reponse if in a JSON String format and is as follows :
+  ```
+  station{
+    "id" : id,
+    "name" : name
+  }
+  ```
+* To get specific schedules between two different stations, you can send a GET Request to the following endpoint :
+  ```
+  127.0.0.1:5000/getTrains/?departureStation={satation1ID}&arrivalStation={station2ID}
+  ````
+  Where ' {satationID} '  and ' {stationID} ' are both the IDs of the stations that you can get as a reponse from calling the ' /getAllStations/ ' endpoint.
+  <img width="910" alt="444" src="https://github.com/marouanosb/ScrapNTF/assets/40308566/50fad5a1-7f2a-4144-8b80-c3e8e509b090">
 
 
 ## Examples
