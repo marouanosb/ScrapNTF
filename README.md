@@ -13,12 +13,22 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
   ```
   python get-pip.py
    ```
-*  Install all the required modules using the command :
+*  Install all the required modules stored in the ' requirements.text ' file using the command :
     ```
     pip install -r requirements.txt
     ```
 
 ## How to use
+* Run the server using the command :
+  ```
+  python api.py
+  ```
+  You can also run it through the Dockerfile that is available inside the project.
+* To get all the stations available, you can send a GET Request to the endpoint :
+  ```
+  127.0.0.1:5000/getAllStations/
+  ```
+  <img width="911" alt="333" src="https://github.com/marouanosb/ScrapNTF/assets/40308566/1c83c8d3-1e09-492a-9849-ec4b14473742">
 
 
 ## Examples
