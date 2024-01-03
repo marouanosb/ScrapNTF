@@ -15,7 +15,7 @@ You can either fetch the data using the deployed api link https://scrapntf.onren
   python get-pip.py
   ```
   
-*  Install all the required modules stored in the *requirements.text* file using the command :
+*  Install all the required modules stored in the *requirements.txt* file using the command :
     ```
     pip install -r requirements.txt
     ```
