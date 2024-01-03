@@ -5,7 +5,7 @@ A Python Flask API that utilizes a web scrapper to extract SNTF train schedules 
 You can either fetch the data using the deployed api link https://scrapntf.onrender.com or run the API locally :
 * Install Python through the official link https://www.python.org/downloads/ .
   
-* Instal Pip, usually Pip is automaticlly installed with Python installation.
+* Install Pip, usually Pip is automaticlly installed with Python installation.
   You can check if you have Pip by running the command :
   ```
   pip --version
